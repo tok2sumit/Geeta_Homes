@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Geeta Homes</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/Geeta Homes Logo.png" alt="Company Logo" class="logo">
+        <nav class="nav">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#address">Address</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="about">
+            <h2>About Us</h2>
+            <p>For over 8 years, commitment to our Core Values has made GeetaHomes the ideal building partner for the region’s most forward-thinking organizations.
+
+                Our success comes from a steadfast commitment to the client’s vision and a culture of balance, integrity, leadership and loyalty. At GeetaHomes, we transform the construction experience through creation of an environment that fosters collaboration and project team engagement.</p>
+        </section>
+        
+        <section class="section" id="services">
+            <h2>Our Services</h2>
+            <p>We provide a range of services including construction, renovation, and architectural planning.</p>
+            <div class="service-images">
+                <img src="images/img-1.png" alt="Construction Service">
+                <img src="images/img-2.png" alt="Renovation Service">
+                <img src="images/img-3.png" alt="Architectural Planning">
+            </div>
+        </section>
+        
+        <section class="section" id="projects">
+            <h2>Recent Projects</h2>
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="images/project1.jpeg" alt="Project 1">
+                        <div class="description">Project 1: Residential Complex</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/project2.jpg" alt="Project 2">
+                        <div class="description">Project 2: Office Building</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div>
+                    <img src="images/email-icon.png" alt="Email Icon">
+                    <p>Email: Geeta.Homes13@gmail.com</p>
+                </div>
+                <div>
+                    <img src="images/phone-icon.png" alt="Phone Icon">
+                    <p>Phone: +91 9819261794</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="address">
+            <h2>Address</h2>
+            <div>
+                <img src="images/" alt="Address Icon">
+                <p>Plot 8 ,Sargam Complex, Boisar-East Near Aajneya Wajan Kata Varangde</p>
+            </div>
+            <div class="map-view">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.95592391566636!3d-37.81720944202132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xb2f6f9ed8072f2e!2sSome%20Landmark!5e0!3m2!1sen!2sus!4v1634205118632!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer">
+        <p>Copyright 2021 All Rights Reserved By GeetaHomes</p>
+    </footer>
+
+
+    <script>
+        let index = 0;
+        function slideShow() {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            index++;
+            if (index >= totalSlides) {
+                index = 0;
+            }
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+        setInterval(slideShow, 3000);
+    </script>
+</body>
+</html>
